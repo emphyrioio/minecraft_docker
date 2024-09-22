@@ -1,1 +1,1 @@
-# mainecraft_docker_boiledone
+Minecraft Docker templates.
