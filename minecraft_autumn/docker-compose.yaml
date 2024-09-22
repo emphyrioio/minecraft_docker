@@ -1,0 +1,40 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server:java17
+    container_name: minecraft_theboiledone
+    ports:
+      - "25565:25565"
+      - "25575:25575"
+    environment:
+      EULA: "TRUE"
+      VERSION: "1.20.1"
+      TYPE: "FORGE"
+      FORGEVERSION: "47.3.0"
+      MEMORY: "4G"
+      TZ: "Europe/Paris"
+      ENABLE_ROLLING_LOGS: "true"
+      RESOURCE_PACK: /resourcepacks/derpswen-autumn-derpware-e3420.zip
+      RESOURCE_PACK_SHA1: "607f1d44fb3e1b7cf3e96a8dda7733a02a0421f3"
+      REQUIRE_RESOURCE_PACK: "true"
+      OVERRIDE_SERVER_PROPERTIES: "TRUE"
+      MODE: "creative"
+      DIFFICULTY: "peaceful"
+      SPAWN_ANIMALS: "false"
+      SPAWN_MONSTERS: "false"
+      SPAWN_NPCS: "false"
+      ENABLE_COMMAND_BLOCK: "true"
+      MAX_PLAYERS: 10
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: minecraft123
+      RCON_PORT: "25575"
+      OPS: "wyst82"
+      SERVER_NAME: "^^ Minecraft Croissy ^^"
+      MOTD: "The Boiled One."
+    volumes:
+      - ./resourcepacks:/resourcepacks:ro
+      - data:/data
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+volumes:
+  data:
