@@ -13,6 +13,7 @@ services:
       MEMORY: "4G"
       ENABLE_ROLLING_LOGS: "true"
       TZ: "Europe/Paris"
+      SEED: "2033728274777721742"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       DIFFICULTY: "easy"
       MAX_PLAYERS: 10
