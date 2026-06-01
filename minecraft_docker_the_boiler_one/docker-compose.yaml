@@ -9,11 +9,10 @@ services:
       EULA: "TRUE"
       VERSION: "1.20.1"
       TYPE: "FORGE"
-      FORGEVERSION: "47.3.0"
+      FORGEVERSION: "47.3.10"
       MEMORY: "4G"
       ENABLE_ROLLING_LOGS: "true"
       TZ: "Europe/Paris"
-      SEED: "2033728274777721742"
       OVERRIDE_SERVER_PROPERTIES: "TRUE"
       DIFFICULTY: "easy"
       MAX_PLAYERS: 10
