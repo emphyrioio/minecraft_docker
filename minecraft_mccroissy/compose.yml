@@ -1,0 +1,20 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server:latest
+    tty: true
+    stdin_open: true
+    ports:
+      - "19132:25565"
+    environment:
+      EULA: "true"
+      TYPE: "FABRIC"      
+      VERSION: "1.21.11" 
+      MEMORY: "4G"
+      LEVEL: "goussanville"
+      WHITELIST: "wyst82,aboula"
+      ENFORCE_WHITELIST: "true"
+      OPS: "wyst82,aboula"
+    volumes:
+      - ./modpacks:/modpacks:ro
+      - ./data:/data
+    restart: unless-stopped
